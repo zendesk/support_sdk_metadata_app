@@ -1,5 +1,6 @@
 img {
   float: left;
+  display: block;
 }
 
 iframe {
@@ -8,60 +9,75 @@ iframe {
 
 .row {
   margin: 0;
-  width: 100%;
+  max-width: 100%;
 }
 
-div#trusted {
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+.top-device-info{
+  float: left;
+  margin-left: 10px;
+}
+
+.device_specs_inner{
+  display: inline-block;
+  overflow: auto;
+}
+
+#device_specs{
+  text-align: center;
+}
+
+#trusted {
+  border-top: 1px dotted #CCC;
+  border-bottom: 1px dotted #CCC;
   margin: 10px 0 10px;
-  padding: 5px;
+  padding: 5px 0px;
+  text-align: center;
 }
 
-div#device_battery {
-  height: 50px;
-  width: 159px;
-  margin: 0;
+.battery-memory-wrapper{
+  overflow: auto;
+  text-align: center;
+}
+
+.battery-memory-wrapper-inner{
+  display: inline-block;
+  overflow: auto;
+  text-align: left;
+}
+
+#device_battery{
   float: left;
-  border-right: 1px solid #333;
-  span#battery_percentage {
-    font-size: 1.7em;
-    font-weight: bold;
-    position: relative;
-  }
+  overflow: auto;
+  margin-right: 40px;
 }
 
-div#device_memory_and_storage {
-  height: 60px;
-  position: absolute;
-  padding-left: 20px;
-  font-size: 1.2em;
-  span#device_total_memory {
-    margin-left: 160px;
-  }
-
-  span#device_storage {
-    margin-left: 160px;
-  }
+.device-battery-image{
+  overflow: auto;
+  margin-bottom: 7px;
 }
 
-div#ip_address {
-  padding: 5px;
-  margin: 5px 0 5px;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+#battery_percentage{
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 1.3em;
 }
 
-div#location {
-  padding-bottom: 5px;
-  float: left;
-}
-
-div#weather {
+#device_memory_and_storage{
   float: right;
 }
 
-div#sdk_client {
-  border-top: 1px solid #333;
-  padding-top: 5px;
+#ip_address{
+  border-top: 1px dotted #CCC;
+  border-bottom: 1px dotted #CCC;
+  margin: 10px 0 10px;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+#location{
+  border-top: 1px dotted #CCC;
+  border-bottom: 1px dotted #CCC;
+  margin: 10px 0 10px;
+  padding: 5px 0px;
+  text-align: center;
 }
