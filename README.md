@@ -24,4 +24,5 @@ Please submit bug reports to this repo as issues. Pull requests are welcome.
 
 ### Acknowledgements
 
-Battery icons designed by Freepik.
+* App developed by [Matt Rosendin](http://github.com/mrosendin), UI updated by [Adam Gray](https://github.com/dashedstripes), and general tweaking and updates by [Mat Cropper](https://github.com/mathewcropper).
+* Battery icons designed by [Freepik](http://www.freepik.com).
