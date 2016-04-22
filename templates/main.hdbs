@@ -62,9 +62,6 @@
   <div class="row">
     <div id="sdk_client">
       <div id="client"></div>
-      <div id="latest_version">
-        <i class="icon-warning-sign"></i> Latest version = 1.6.0.0
-      </div>
     </div>
   </div>
 </div>
