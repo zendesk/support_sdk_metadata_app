@@ -11,9 +11,9 @@
   <div class="row">
     <div id="trusted">
       {{#if trusted}}
-        The user is logged in.
+        The user was logged in.
       {{else}}
-        The user is not logged in.
+        The user was not logged in.
       {{/if}}
     </div>
   </div>
