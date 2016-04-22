@@ -1,0 +1,51 @@
+<div class="app">
+  <div class="row" id="device_specs">
+    <img src="" />
+    <div id="device_model">{{device_model}}</div>
+    <div id="device_os"></div>
+  </div>
+  <div class="row">
+    <div id="trusted">
+      {{#if trusted}}
+        The user is logged in.
+      {{else}}
+        The user is not logged in.
+      {{/if}}
+    </div>
+  </div>
+  <div class="row">
+    <div id="device_battery">
+      <img src="" />
+      <span id="battery_percentage">{{device_battery}}%</span>
+    </div>
+    <div id="device_memory_and_storage">
+      <span id="device_total_memory">{{device_total_memory}}</span>
+      <span id="device_storage">{{device_storage}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div id="ip_address">
+      IP: {{ip_address}}
+    </div>
+  </div>
+  <div class="row">
+    <div id="map">
+      {{iframe (assetURL 'index.html')}}
+    </div>
+    <div id="location">
+      {{user_location}}
+    </div>
+    <div id="weather">
+      <img src="" />
+    </div>
+  </div>
+  <div class="row">
+    <div id="sdk_client">
+      <div id="client"></div>
+      <div id="latest_version">
+        <i class="icon-warning-sign"></i> Latest version = 1.6.0.0
+      </div>
+    </div>
+  </div>
+</div>
+<div id="response"></div>

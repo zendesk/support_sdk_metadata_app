@@ -1,0 +1,67 @@
+img {
+  float: left;
+}
+
+iframe {
+  width: 320px;
+}
+
+.row {
+  margin: 0;
+  width: 100%;
+}
+
+div#trusted {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  margin: 10px 0 10px;
+  padding: 5px;
+}
+
+div#device_battery {
+  height: 50px;
+  width: 159px;
+  margin: 0;
+  float: left;
+  border-right: 1px solid #333;
+  span#battery_percentage {
+    font-size: 1.7em;
+    font-weight: bold;
+    position: relative;
+  }
+}
+
+div#device_memory_and_storage {
+  height: 60px;
+  position: absolute;
+  padding-left: 20px;
+  font-size: 1.2em;
+  span#device_total_memory {
+    margin-left: 160px;
+  }
+
+  span#device_storage {
+    margin-left: 160px;
+  }
+}
+
+div#ip_address {
+  padding: 5px;
+  margin: 5px 0 5px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+div#location {
+  padding-bottom: 5px;
+  float: left;
+}
+
+div#weather {
+  float: right;
+}
+
+div#sdk_client {
+  border-top: 1px solid #333;
+  padding-top: 5px;
+}
