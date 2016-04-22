@@ -74,10 +74,24 @@ iframe {
   text-align: center;
 }
 
-#location{
+#weather{
+  overflow: auto;
+}
+
+#weather img{
+  float: none;
+  margin: 0 auto;
+}
+
+.location-wrapper{
+  overflow: auto;
   border-top: 1px dotted #CCC;
   border-bottom: 1px dotted #CCC;
   margin: 10px 0 10px;
   padding: 5px 0px;
+  text-align: center;
+}
+
+#sdk_client{
   text-align: center;
 }

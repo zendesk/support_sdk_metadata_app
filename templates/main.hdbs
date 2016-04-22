@@ -50,11 +50,13 @@
     <div id="map">
       {{iframe (assetURL 'index.html')}}
     </div>
-    <div id="location">
-      {{user_location}}
-    </div>
-    <div id="weather">
-      <img src="" />
+    <div class="location-wrapper">
+      <div id="location">
+        {{user_location}}
+      </div>
+      <div id="weather">
+        <img src="" />
+      </div>
     </div>
   </div>
   <div class="row">
