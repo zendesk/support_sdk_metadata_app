@@ -2,7 +2,7 @@
 
 The **SDK Metadata App** is a Zendesk ticket app that allows you to see information relating to a ticket if it was created via the [Support SDK](https://developer.zendesk.com/embeddables).
 
-### The following information is displayed:
+### The following information is displayed about the end-user:
 
 * Device name
 * Operating system and version
