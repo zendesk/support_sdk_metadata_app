@@ -3,12 +3,12 @@
   return {
 
     SDK: {
-      sdk_for_android: {name: 'SDK for Android', image: 'android.png'}, 
-      sdk_for_ios: {name: 'SDK for iOS', image: 'ios.png'}, 
-      unity_1_for_android: {name: 'Unity Plugin (v1.0, v.1.1) for Android', image: 'unity.png'},
-      unity_1_for_ios: {name: 'Unity Plugin (v1.0, v1.1) for iOS', image: 'unity.png'},
-      unity_1_4_for_android: {name: 'Unity Plugin (v1.4) for Android', image: 'unity.png'},
-      unity_1_4_for_ios: {name: 'Unity Plugin (v1.4) for iOS', image: 'unity.png'}
+      sdk_for_android: {name: 'SDK for Android', unity: false}, 
+      sdk_for_ios: {name: 'SDK for iOS', unity: false}, 
+      unity_1_for_android: {name: 'Unity Plugin (v1.0, v.1.1) for Android', unity: true},
+      unity_1_for_ios: {name: 'Unity Plugin (v1.0, v1.1) for iOS', unity: true},
+      unity_1_4_for_android: {name: 'Unity Plugin (v1.4) for Android', unity: true},
+      unity_1_4_for_ios: {name: 'Unity Plugin (v1.4) for iOS', unity: true}
     },
 
     // REQUESTS ========================================================================
@@ -67,7 +67,7 @@
         return audit.via.channel === 'mobile_sdk'; 
       }, this);
 
-      typeof this.sdk_audit !== 'undefined' ? this.parseClient(this.sdk_audit) : this.showErrorMessage();
+      if (typeof this.sdk_audit !== 'undefined') { this.parseClient(this.sdk_audit); } else { this.showErrorMessage(); }
     },
 
     parseClient: function () {
@@ -106,7 +106,7 @@
         }
       }
 
-      this.loadView()
+      this.loadView();
     },
 
     loadView: function () {
@@ -117,10 +117,9 @@
       this.switchTo('system', {system: this.system, sdk: this.sdk.name });
 
       // Use renderTemplate(templateName, data) to load metadata into template then insert into system.hdbs
-      var isUnity, template;
-      this.sdk['image'] == 'unity.png' ? isUnity = true : isUnity = false;
-      this.os == 'Android' ? template = 'android-device' : template = 'ios-device';
-      var deviceTemplate = this.renderTemplate(template, { device: this.device, sdk_image: this.sdk.image, isUnity: isUnity });
+      var template;
+      if (this.os === 'Android') { template = 'android-device'; } else { template = 'ios-device'; }
+      var deviceTemplate = this.renderTemplate(template, { device: this.device, sdk_image: this.sdk.image, isUnity: this.sdk.unity });
       this.$('#device').html(deviceTemplate);
     },
 

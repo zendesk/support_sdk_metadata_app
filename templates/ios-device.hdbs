@@ -1,6 +1,9 @@
 <div class="row" id="device_specs">
   <div class="device_specs_inner">
-    <img alt="{{sdk_image}}" src="{{ assetURL sdk_image}}" />
+    {{#if isUnity}}
+      <img alt="Unity" src="{{assetURL 'unity.png'}}" />
+    {{/if}}
+    <img alt="iOS" src="{{ assetURL 'ios.png'}}" />
     <div class="top-device-info">
       {{#if device.device_model}}
         <div id="device_model">{{device.device_model}}</div>
