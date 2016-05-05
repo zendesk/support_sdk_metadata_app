@@ -1,4 +1,4 @@
-img {
+ img {
   float: left;
   display: block;
 }
@@ -29,7 +29,7 @@ iframe {
 #trusted {
   border-top: 1px dotted #CCC;
   border-bottom: 1px dotted #CCC;
-  margin: 10px 0 10px;
+  margin: 10px 0 0 0;
   padding: 5px 0px;
   text-align: center;
 }
@@ -37,6 +37,8 @@ iframe {
 .battery-memory-wrapper{
   overflow: auto;
   text-align: center;
+  padding: 10px 0 10px;
+  border-bottom: 1px dotted #CCC;
 }
 
 .battery-memory-wrapper-inner{
@@ -67,9 +69,8 @@ iframe {
 }
 
 #ip_address{
-  border-top: 1px dotted #CCC;
   border-bottom: 1px dotted #CCC;
-  margin: 10px 0 10px;
+  margin: 0 0 10px;
   padding: 5px 0px;
   text-align: center;
 }
@@ -92,6 +93,6 @@ iframe {
   text-align: center;
 }
 
-#sdk_client{
+#sdk {
   text-align: center;
 }

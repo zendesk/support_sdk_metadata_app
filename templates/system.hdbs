@@ -1,0 +1,26 @@
+<div id="sdk_metadata_app">
+  <div class="row">
+    <div id="device"></div>
+  </div>
+  <div class="row">
+    <div id="ip_address">
+      IP: {{system.ip_address}}
+    </div>
+  </div>
+  <div class="row">
+    <div id="map">
+      {{iframe (assetURL 'index.html')}}
+    </div>
+    <div class="location-wrapper">
+      <div id="location">
+        {{system.location}}
+      </div>
+      <div id="weather">
+        <img src="" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div id="sdk">{{sdk}}</div>
+  </div>
+</div>
