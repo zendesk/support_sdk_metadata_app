@@ -3,8 +3,8 @@
   return {
 
     SDK: {
-      sdk_for_android: {name: 'Zendesk Support SDK for Android', unity: false}, 
-      sdk_for_ios: {name: 'Zendesk Support SDK for iOS', unity: false}, 
+      sdk_for_android: {name: 'Zendesk Support SDK for Android', unity: false},
+      sdk_for_ios: {name: 'Zendesk Support SDK for iOS', unity: false},
       unity_1_for_android: {name: 'Zendesk Unity Plugin (v1.0, v.1.1) for Android', unity: true},
       unity_1_for_ios: {name: 'Zendesk Unity Plugin (v1.0, v1.1) for iOS', unity: true},
       unity_1_4_for_android: {name: 'Zendesk Unity Plugin (v1.4) for Android', unity: true},
@@ -22,18 +22,6 @@
         };
       },
 
-      
-
-      /*********************************************************************************
-      getLatestSDKRelease: function (OS) {
-        return {
-          url: 'https://api.github.com/repos/zendesk/zendesk_sdk_ios/releases/latest',
-          type: 'GET',
-          dataType: 'application/json'
-        }
-      }
-      *********************************************************************************/
-
     },
 
     // EVENTS ==========================================================================
@@ -43,8 +31,6 @@
       'fetchTicketAudits.done':'findSDKAudit',
       'fetchTicketAudits.fail':'showErrorMessage',
       'iframe.registered':'processSDKProperties'
-      // 'getLatestSDKRelease.done':'showLatestRelease',
-      // 'getLatestSDKRelease.fail':'showErrorMessage',
     },
 
     // EVENT HANDLERS ==================================================================
@@ -137,12 +123,6 @@
       }
 
     },
-
-    // showLatestRelease: function (response) {
-
-    // },
-
-    
 
     showErrorMessage: function () {
       this.switchTo('error', 'message: There was an error or there were no mobile audits.');
