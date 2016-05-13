@@ -4,12 +4,12 @@
   </div>
   <div class="row">
 	<div class="row">
-		<div class="userInfo">
-		<div class="halfL">
+		<div class="user-info">
+		<div class="half-left">
 			<h6>IP address</h6>
 			<p>{{system.ip_address}}</p>
 		</div>
-		<div class="halfR">
+		<div class="half-right">
 			<h6>Location</h6>
 			<p>{{system.location}}</p>
 		</div>
@@ -17,7 +17,7 @@
 	</div>	
   </div>
   <div class="row">
-  	<div id="sdkVersion">
+  	<div id="sdk-version">
 	    <p>{{sdk}}</p>
 	</div>
   </div>

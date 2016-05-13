@@ -19,14 +19,14 @@
 
 {{#unless isUnity}}
 <div class="row">
-	<div class="deviceInfo">
-	<div class="halfL">
+	<div class="device-info">
+	<div class="half-left">
 		{{#if device.device_battery_ok}}
 			<h6>Battery</h6>
 			<p>OK</p>
 		{{/if}}
 	</div>
-	<div class="halfR">
+	<div class="half-right">
 		<h6>Memory</h6>
 		<p>{{device.device_used_memory}}/{{device.device_total_memory}} MB</p>
 	</div>

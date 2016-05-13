@@ -14,23 +14,23 @@
 <hr/>
 
 <div class="row">
-	<div class="deviceInfo">
-		<div class="halfL">
+	<div class="device-info">
+		<div class="half-left">
 			<h6>Battery</h6>
 			<p>{{device.device_battery}}%</p>
 		</div>
-		<div class="halfR">
+		<div class="half-right">
 		</div>
 	</div>
 </div>
 
 <div class="row">
-	<div class="deviceInfo">
-		<div class="halfL">
+	<div class="device-info">
+		<div class="half-left">
 			<h6>Memory</h6>
 			<p>{{device.device_total_memory}} MB</p>
 		</div>
-		<div class="halfR">
+		<div class="half-right">
 			<h6>Storage</h6>
 			<p>{{device.device_storage}} GB</p>
 		</div>
