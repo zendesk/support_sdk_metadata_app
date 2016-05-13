@@ -3,12 +3,12 @@
   return {
 
     SDK: {
-      sdk_for_android: {name: 'SDK for Android', unity: false}, 
-      sdk_for_ios: {name: 'SDK for iOS', unity: false}, 
-      unity_1_for_android: {name: 'Unity Plugin (v1.0, v.1.1) for Android', unity: true},
-      unity_1_for_ios: {name: 'Unity Plugin (v1.0, v1.1) for iOS', unity: true},
-      unity_1_4_for_android: {name: 'Unity Plugin (v1.4) for Android', unity: true},
-      unity_1_4_for_ios: {name: 'Unity Plugin (v1.4) for iOS', unity: true}
+      sdk_for_android: {name: 'Zendesk Support SDK for Android', unity: false}, 
+      sdk_for_ios: {name: 'Zendesk Support SDK for iOS', unity: false}, 
+      unity_1_for_android: {name: 'Zendesk Unity Plugin (v1.0, v.1.1) for Android', unity: true},
+      unity_1_for_ios: {name: 'Zendesk Unity Plugin (v1.0, v1.1) for iOS', unity: true},
+      unity_1_4_for_android: {name: 'Zendesk Unity Plugin (v1.4) for Android', unity: true},
+      unity_1_4_for_ios: {name: 'Zendesk Unity Plugin (v1.4) for iOS', unity: true}
     },
 
     // REQUESTS ========================================================================
