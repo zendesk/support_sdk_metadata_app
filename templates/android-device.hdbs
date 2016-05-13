@@ -1,57 +1,35 @@
-<div class="row" id="device_specs">
-  <div class="device_specs_inner">
-    {{#if isUnity}}
-      <img alt="Unity" src="{{assetURL 'unity.png'}}" />
-    {{/if}}
-    <img alt="Android" src="{{assetURL 'android.png'}}" />
-    <div class="top-device-info">
-      {{#if device.device_model}}
-        <div id="device_model">{{device.device_model}}</div>
-      {{/if}}
-      {{#if device.device_os}}
-        <div id="device_os">Android {{device.device_os}}</div>
-      {{else}}
-        {{#if isUnity}}
-          Android<br/>
-          Unity Plugin
-        {{/if}}
-      {{/if}}
-    </div>
-  </div>
+<div class="row">
+	<h4>
+		{{#if device.device_model}}
+		<div id="device_model">{{device.device_model}}</div>
+		{{/if}}
+	</h4>
+	<h5>
+		{{#if device.device_os}}
+		<div id="device_os">Android {{device.device_os}}</div>
+		{{else}}
+		{{#if isUnity}}
+		Android
+		{{/if}}
+		{{/if}}
+	</h5>
 </div>
 
-<div class="row">
-  <div id="trusted">
-    {{#if trusted}}
-      The user was logged in.
-    {{else}}
-      The user was not logged in.
-    {{/if}}
-  </div>
-</div>
+<hr/>
 
 {{#unless isUnity}}
 <div class="row">
-  <div class="battery-memory-wrapper">
-    <div class="battery-memory-wrapper-inner">
-      <div id="device_battery">
-        <div class="device-battery-image">
-          <img src="" />
-        </div>
-        <span id="battery_status">
-          {{#if device.device_battery_ok}}
-            <strong>Battery:</strong> Ok
-          {{/if}}
-        </span>
-      </div>
-      <div id="device_memory_and_storage">
-        <p id="device_total_memory">
-          <strong>Memory</strong>
-          <br>
-          {{device.device_used_memory}}/{{device.device_total_memory}} MB
-        </p>
-      </div>
-    </div>
-  </div>
+	<div class="device-info">
+		<div class="half-left">
+			{{#if device.device_battery_ok}}
+			<h6>Battery</h6>
+			<p>OK</p>
+			{{/if}}
+		</div>
+		<div class="half-right">
+			<h6>Memory</h6>
+			<p>{{device.device_used_memory}}/{{device.device_total_memory}} MB</p>
+		</div>
+	</div>
 </div>
 {{/unless}}

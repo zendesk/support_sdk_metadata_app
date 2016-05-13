@@ -1,26 +1,24 @@
 <div id="sdk_metadata_app">
-  <div class="row">
-    <div id="device"></div>
-  </div>
-  <div class="row">
-    <div id="ip_address">
-      IP: {{system.ip_address}}
-    </div>
-  </div>
-  <div class="row">
-    <div id="map">
-      {{iframe (assetURL 'index.html')}}
-    </div>
-    <div class="location-wrapper">
-      <div id="location">
-        {{system.location}}
-      </div>
-      <div id="weather">
-        <img src="" />
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div id="sdk">{{sdk}}</div>
-  </div>
+	<div class="row">
+		<div id="device"></div>
+	</div>
+	<div class="row">
+		<div class="row">
+			<div class="user-info">
+				<div class="half-left">
+					<h6>IP address</h6>
+					<p>{{system.ip_address}}</p>
+				</div>
+				<div class="half-right">
+					<h6>Location</h6>
+					<p>{{system.location}}</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="row">
+		<div id="sdk-version">
+			<p>{{sdk}}</p>
+		</div>
+	</div>
 </div>

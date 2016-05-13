@@ -1,52 +1,38 @@
-<div class="row" id="device_specs">
-  <div class="device_specs_inner">
-    {{#if isUnity}}
-      <img alt="Unity" src="{{assetURL 'unity.png'}}" />
-    {{/if}}
-    <img alt="iOS" src="{{ assetURL 'ios.png'}}" />
-    <div class="top-device-info">
-      {{#if device.device_model}}
-        <div id="device_model">{{device.device_model}}</div>
-      {{/if}}
-      {{#if device.device_os}}
-        <div id="device_os">iOS {{device.device_os}}</div>
-      {{/if}}
-    </div>
-  </div>
+<div class="row">
+	<h4>
+		{{#if device.device_model}}
+		<div id="device_model">{{device.device_model}}</div>
+		{{/if}}
+	</h4>
+	<h5>
+		{{#if device.device_os}}
+		<div id="device_os">iOS {{device.device_os}}</div>
+		{{/if}}
+	</h5>
+</div>
+
+<hr/>
+
+<div class="row">
+	<div class="device-info">
+		<div class="half-left">
+			<h6>Battery</h6>
+			<p>{{device.device_battery}}%</p>
+		</div>
+		<div class="half-right">
+		</div>
+	</div>
 </div>
 
 <div class="row">
-  <div id="trusted">
-    {{#if trusted}}
-      The user was logged in.
-    {{else}}
-      The user was not logged in.
-    {{/if}}
-  </div>
+	<div class="device-info">
+		<div class="half-left">
+			<h6>Memory</h6>
+			<p>{{device.device_total_memory}} MB</p>
+		</div>
+		<div class="half-right">
+			<h6>Storage</h6>
+			<p>{{device.device_storage}} GB</p>
+		</div>
+	</div>
 </div>
-
-<div class="row">
-  <div class="battery-memory-wrapper">
-    <div class="battery-memory-wrapper-inner">
-      <div id="device_battery">
-        <div class="device-battery-image">
-          <img src="" />
-        </div>
-        <span id="battery_percentage">{{device.device_battery}}%</span>
-      </div>
-      <div id="device_memory_and_storage">
-        <p id="device_total_memory">
-          <strong>Memory</strong>
-          <br>
-          {{device.device_total_memory}} MB
-        </p>
-        <p id="device_storage">
-          <strong>Storage</strong>
-          <br>
-          {{device.device_storage}} GB
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
