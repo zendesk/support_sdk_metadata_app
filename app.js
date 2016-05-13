@@ -22,11 +22,7 @@
         };
       },
 
-      getLocationWeather: function (lat, lon) {
-        return {
-          url: 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=8a64f5ac55f62c14e1d5788f6acbfe52'
-        };
-      },
+      
 
       /*********************************************************************************
       getLatestSDKRelease: function (OS) {
@@ -46,11 +42,9 @@
       'app.activated':'init',
       'fetchTicketAudits.done':'findSDKAudit',
       'fetchTicketAudits.fail':'showErrorMessage',
-      'iframe.registered':'processSDKProperties',
+      'iframe.registered':'processSDKProperties'
       // 'getLatestSDKRelease.done':'showLatestRelease',
       // 'getLatestSDKRelease.fail':'showErrorMessage',
-      'getLocationWeather.done':'showLocationWeather',
-      'getLocationWeather.fail':'showErrorMessage'
     },
 
     // EVENT HANDLERS ==================================================================
@@ -142,36 +136,13 @@
         this.$('div#device_battery img').attr('src', batteryImageSource);
       }
 
-      // Send coordinates to Google map
-      this.postMessage('mapCoordinates', { latitude: this.system.latitude, longitude: this.system.longitude });
-
-      // Get latest Zendesk SDK version from developer.zendesk.com or GitHub
-      // this.ajax('getLatestSDKRelease', OS);
-
-      // Get weather from location
-      this.ajax('getLocationWeather', this.latitude, this.longitude);
-
     },
 
     // showLatestRelease: function (response) {
 
     // },
 
-    showLocationWeather: function (data) {
-      if (data.weather) {
-        if (data.weather[0].main == "Rain") {
-          this.$('div#weather img').attr('src', this.assetURL('rain.png'));
-        } else if (data.weather[0].main == "Clouds") {
-          this.$('div#weather img').attr('src', this.assetURL('clouds.png'));
-        } else if (data.weather[0].main == "Clear") {
-          this.$('div#weather img').attr('src', this.assetURL('clear.png'));
-        } else if (data.weather[0].main == "Mist") {
-          this.$('div#weather img').attr('src', this.assetURL('mist.png'));
-        } else {
-          this.$('div#weather').textContent = data.weather[0].main;
-        }
-      }
-    },
+    
 
     showErrorMessage: function () {
       this.switchTo('error', 'message: There was an error or there were no mobile audits.');
