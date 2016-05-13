@@ -1,16 +1,16 @@
 <div class="row">
 	<h4>
 		{{#if device.device_model}}
-			<div id="device_model">{{device.device_model}}</div>
+		<div id="device_model">{{device.device_model}}</div>
 		{{/if}}
 	</h4>
 	<h5>
 		{{#if device.device_os}}
-			<div id="device_os">Android {{device.device_os}}</div>
+		<div id="device_os">Android {{device.device_os}}</div>
 		{{else}}
-			{{#if isUnity}}
-				Android
-			{{/if}}
+		{{#if isUnity}}
+		Android
+		{{/if}}
 		{{/if}}
 	</h5>
 </div>
@@ -22,8 +22,8 @@
 	<div class="device-info">
 		<div class="half-left">
 			{{#if device.device_battery_ok}}
-				<h6>Battery</h6>
-				<p>OK</p>
+			<h6>Battery</h6>
+			<p>OK</p>
 			{{/if}}
 		</div>
 		<div class="half-right">
