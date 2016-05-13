@@ -9,7 +9,7 @@
 			<div id="device_os">Android {{device.device_os}}</div>
 		{{else}}
 			{{#if isUnity}}
-			  Android (Unity)
+			  Android
 			{{/if}}
 		{{/if}}
 	</h5>
