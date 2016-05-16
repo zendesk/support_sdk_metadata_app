@@ -36,6 +36,7 @@
     // EVENT HANDLERS ==================================================================
 
     init: function() {
+      this.switchTo('loading');
       this.ajax('fetchTicketAudits');
     },
 
@@ -44,10 +45,10 @@
 
       // Check for a ticket audit completed through the mobile_sdk channel
       this.sdk_audit = _.find(audits, function (audit) {
-        return audit.via.channel === 'mobile_sdk'; 
+        return audit.via.channel === 'mobile_sdk';
       }, this);
 
-      if (typeof this.sdk_audit !== 'undefined') { this.parseClient(this.sdk_audit); } else { this.showErrorMessage(); }
+      if (typeof this.sdk_audit !== 'undefined') { this.parseClient(this.sdk_audit); } else { this.hide(); }
     },
 
     parseClient: function () {
@@ -59,7 +60,7 @@
         if (split[1].indexOf('iOS') > -1) {
           this.sdk = this.SDK['sdk_for_ios'];
           this.os = 'iOS';
-        } 
+        }
         if (split[1].indexOf('Android') > -1) {
           this.sdk = this.SDK['sdk_for_android'];
           this.os = 'Android';
