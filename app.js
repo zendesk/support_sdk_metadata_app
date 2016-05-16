@@ -52,8 +52,9 @@
 
       var regex = /(\d\.\d\.\d\.\d)/;
       var version = regex.exec(this.client);
-      console.log(version);
       if (version != null) { this.sdk += " v" + version[0]; }
+      // Unity 1.0 and 1.1 Plugins are the only SDKs that do not have a version number in the client metadata
+      else { this.unity = true; this.sdk += " Unity Plugin (v1.0, v1.1)"; }
 
       this.loadView();
     },
