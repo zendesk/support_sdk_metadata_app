@@ -11,12 +11,13 @@ The **SDK Metadata App** is a Zendesk ticket app that allows you to see informat
 * Device memory
 * IP address
 * Location
+* Zendesk SDK name and version number
 
 Note: Not all information is available for all operating systems and devices.
 
 ### Screenshot:
 
-<img src="https://github.com/zendesk/sdk_metadata_app/blob/master/assets/screenshot-0.png?raw=true" />
+![](https://dl.dropboxusercontent.com/u/20150821/SDK_Metadata/screenshot.png)
 
 ### Contributing
 
