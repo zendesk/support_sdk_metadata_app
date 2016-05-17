@@ -15,12 +15,14 @@
 	text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
 	text-transform: uppercase;
-	color: #78A300;
+	color: #555555;
 }
 
 h6 {
+	text-transform: uppercase;
+	color: #78A300;
 	font-weight: 200;
 }
 
@@ -35,8 +37,8 @@ p {
 }
 
 .device-info, .user-info {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .half-left {
