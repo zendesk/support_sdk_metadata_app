@@ -1,0 +1,1 @@
+<img class="loading" src="{{assetURL 'loading.gif'}}" alt="Loading...">
