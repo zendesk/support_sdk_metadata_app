@@ -46,10 +46,10 @@
       // Prepare the client information for template
       this.client = this.sdk_audit.metadata.system.client;
 
-      this.client.indexOf('iOS') > -1 ? this.os = "iOS" : this.os = "Android";
-      this.client.indexOf('Unity') > -1 ? this.unity = true : this.unity = false;
+      if(this.client.indexOf('iOS') > -1){ this.os = "iOS"; } else{ this.os = "Android"; }
+      if(this.client.indexOf('Unity') > -1){ this.unity = true; } else{ this.unity = false; }
 
-      this.unity ? this.sdk = "Unity Plugin for " + this.os : this.sdk = "Zendesk Support SDK for " + this.os;
+      if(this.unity){ this.sdk = "Unity Plugin for " + this.os; } else{ this.sdk = "Zendesk Support SDK for " + this.os; }
 
       var regex = /(\d\.\d\.\d\.\d)/;
       var version = regex.exec(this.client);
