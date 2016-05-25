@@ -36,8 +36,6 @@ Install the app through the Zendesk apps marketplace. As part of the installatio
 * Pull requests are welcome.
 * Please submit bug reports to this repo as issues. Support is provided on a best endeavours basis only.
 
-## Screenshot(s):
-
-Please use Skitch or CloudApp to upload a screenshot or a GIF. If GIFs are possible they are always better. See LICEcap.
+## Screenshot:
 
 ![](https://dl.dropboxusercontent.com/u/20150821/SDK_Metadata/screenshot.png)
