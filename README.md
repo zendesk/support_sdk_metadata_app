@@ -39,3 +39,10 @@ Install the app through the Zendesk apps marketplace. As part of the installatio
 ## Screenshot:
 
 ![](https://dl.dropboxusercontent.com/u/20150821/SDK_Metadata/screenshot.png)
+
+## Release Notes:
+
+| Version | Notes |
+| ----- | ----- |
+| 1.1 | Changes accent color to match the New Zendesk branding |
+| 1.0 | First release |
