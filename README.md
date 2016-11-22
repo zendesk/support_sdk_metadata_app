@@ -38,7 +38,7 @@ Install the app through the Zendesk apps marketplace. As part of the installatio
 
 ## Screenshot:
 
-![](https://dl.dropboxusercontent.com/u/20150821/SDK_Metadata/screenshot.png)
+![](http://zen-marketing-product.s3.amazonaws.com/product/images/sdk_support_metadata_app.png)
 
 ## Release Notes:
 
