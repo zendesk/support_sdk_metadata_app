@@ -51,7 +51,7 @@
 
       if(this.unity){ this.sdk = "Unity Plugin for " + this.os; } else{ this.sdk = "Zendesk Support SDK for " + this.os; }
 
-      var regex = /(\d\.\d\.\d\.\d)/;
+      var regex = /(\d{1,2}\.\d{1,2}\.\d{1,2}\.\d{1,2})/;
       var version = regex.exec(this.client);
       if (version != null) { this.sdk += " v" + version[0]; }
       // Unity 1.0 and 1.1 Plugins are the only SDKs that do not have a version number in the client metadata
