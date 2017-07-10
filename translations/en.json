@@ -1,7 +1,7 @@
 {
   "app": {
-    "short_description": "See device information for Support SDK tickets",
-    "long_description": "A ticket app to show extra information about tickets created via the Support SDK",
+    "short_description": "A ticket app to show extra information about tickets created via the Support SDK",
+    "long_description": "The SDK Metadata App is a Zendesk Support ticket app that allows you to see information relating to a ticket if it was created via the Support SDK.\nThe following information is displayed about the end-user and their device in the ticker sidebar:\n\n* Device name\n* Operating system and version\n* Battery level\n* Device storage\n* Device memory\n* IP address\n* Location\n* Zendesk SDK name and version number\n\nThe ticket app will only appear in the ticket sidebar when the ticket was received via the Zendesk Support SDK.\n\nNot all information is available for all operating systems and devices.",
     "installation_instructions": "Simply click the install button"
   },
 
