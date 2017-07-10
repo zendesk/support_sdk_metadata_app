@@ -1,18 +1,12 @@
 {
   "app": {
-    "package": "app_name",
-    "description": {
-      "value": "Play the famous zen tunes in your help desk.",
-      "title": "app description"
-    },
-    "name": {
-      "value": "Buddha Machine",
-      "title": "app name"
-    }
+    "short_description": "See device information for Support SDK tickets",
+    "long_description": "A ticket app to show extra information about tickets created via the Support SDK",
+    "installation_instructions": "Simply click the install button"
   },
 
   "loading": {
-    "value": "Welcome to this Sample App",
+    "value": "Welcome to this app",
     "title": "loading placeholder"
   },
 
