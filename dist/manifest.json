@@ -7,7 +7,11 @@
   },
   "defaultLocale": "en",
   "private": false,
-  "location": "ticket_sidebar",
-  "version": "1.2",
-  "frameworkVersion": "1.0"
+  "location": {
+    "support": {
+      "ticket_sidebar": "assets/index.html"
+    }
+  },
+  "version": "2.0",
+  "frameworkVersion": "2.0"
 }
