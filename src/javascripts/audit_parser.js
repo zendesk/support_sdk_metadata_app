@@ -6,8 +6,8 @@ export const PLATFORM_IOS = 3;
 export const VARIANT_UNKOWN = 10;
 export const VARIANT_UNITY = 11;
 
-export const VERSION_UNKOWN = 20;
-export const VERSION_1x = 21;
+export const VERSION_UNKOWN = -20;
+export const VERSION_1x = -21;
 
 if (typeof String.prototype.contains === 'undefined') { 
     String.prototype.contains = function(it) { return this.indexOf(it) != -1; };

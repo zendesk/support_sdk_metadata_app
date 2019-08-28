@@ -59,7 +59,7 @@ const findModelInformation = (sdkMetaData) => {
             value = model;
         } else {
             let searchString = model.split("/")[0];
-            value = `<a href="https://www.gsmarena.com/res.php3?sSearch=${searchString}">${model}</a>`;
+            value = `<a href="https://www.gsmarena.com/res.php3?sSearch=${searchString}" target="_blank">${model}</a>`;
         }
 
         return {
@@ -113,9 +113,18 @@ const findStorageInformation = (sdkMetaData) => {
     }
 }
 
-const findMemoryUseage = (sdkMetaData) => {
+const convertMemoryForDisplay = (memoryAmount, sdkVersion) => {
 
-    const convertMemoryToGb = (value) => (value / 1024).toFixed(2);
+    if (sdkVersion == audit.VERSION_1x || sdkVersion.startsWith("1.")) {
+        // 1.x sends memory usage in B
+        return (memoryAmount / 1024 / 1024 / 1024).toFixed(2);
+    } else { 
+        // 2.x sends memory usage in MB
+        return (memoryAmount / 1024).toFixed(2);
+    }
+}
+
+const findMemoryUseage = (sdkMetaData, sdkVersion) => {
 
     let totalMemory = sdkMetaData['device_total_memory'] || 0;
     let usedMemory = sdkMetaData['device_used_memory'] || 0;
@@ -123,19 +132,19 @@ const findMemoryUseage = (sdkMetaData) => {
     if (totalMemory > 0 && usedMemory > 0) {
         return {
             key: 'Memory',
-            value: `${convertMemoryToGb(usedMemory)}/${convertMemoryToGb(totalMemory)} GB`
+            value: `${convertMemoryForDisplay(usedMemory, sdkVersion)}/${convertMemoryForDisplay(totalMemory, sdkVersion)} GB`
         }
 
     } else if (totalMemory > 0 && usedMemory == 0) {
         return {
             key: 'Memory',
-            value: `${convertMemoryToGb(totalMemory)} GB`
+            value: `${convertMemoryForDisplay(totalMemory, sdkVersion)} GB`
         }
 
     } else if (totalMemory == 0 && usedMemory > 0) {
         return {
             key: 'Used Memory',
-            value: `${convertMemoryToGb(usedMemory)} GB`
+            value: `${convertMemoryForDisplay(usedMemory, sdkVersion)} GB`
         }
     }
 }
@@ -146,7 +155,7 @@ export const buildDeviceInfoForPresentation = (deviceInfo) => {
         findManufacturer(sdkMetaData, deviceInfo.platform),
         findModelInformation(sdkMetaData),
         findOsInformation(sdkMetaData, deviceInfo.platform),
-        findMemoryUseage(sdkMetaData),
+        findMemoryUseage(sdkMetaData, deviceInfo.version),
         findBatteryInformation(sdkMetaData),
         findStorageInformation(sdkMetaData)
     ].filter(it => it)
