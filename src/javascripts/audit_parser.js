@@ -33,7 +33,7 @@ const findVersion = (input) => {
         if (versionSegment) {
             let version = versionSegment.split("/");
 
-            if (version.length == 2) {
+            if (version.length === 2) {
                 return version[1];
             } else {
                 return VERSION_UNKOWN;
@@ -55,7 +55,7 @@ const findVariant = (input) => {
 
 export const findSdkAudit = (data) => {
     let mobileSdkAudit = data.audits.find(item => {
-        if(item.via.channel == "mobile_sdk") {
+        if(item.via.channel === "mobile_sdk") {
             let userAgent = item.metadata.system.client;
             return userAgent && (userAgent.startsWith("Zendesk-SDK") || userAgent.startsWith("Zendesk SDK"));
         } else {

@@ -5,23 +5,23 @@ export const buildDeviceString = (deviceInfo) => {
     var deviceString = "";
     
     // Variant
-    if (deviceInfo.variant == audit.VARIANT_UNITY) {
+    if (deviceInfo.variant === audit.VARIANT_UNITY) {
         deviceString = "Unity Plugin for ";
     } else {
         deviceString = "Zendesk Support SDK for ";
     }
 
     // Platform
-    if (deviceInfo.platform == audit.PLATFORM_ANDROID) {
+    if (deviceInfo.platform === audit.PLATFORM_ANDROID) {
         deviceString += "Android ";
     } else {
         deviceString += "iOS ";
     }
 
     // Version
-    if (deviceInfo.version == audit.VERSION_1x) {
+    if (deviceInfo.version === audit.VERSION_1x) {
         deviceString += "v1.0 or v1.1 ";
-    } else if (deviceInfo.version == audit.VERSION_UNKOWN) {
+    } else if (deviceInfo.version === audit.VERSION_UNKOWN) {
         deviceString += "unkown version ";
     } else {
         deviceString += `v${deviceInfo.version}`;
@@ -32,13 +32,13 @@ export const buildDeviceString = (deviceInfo) => {
 
 const findManufacturer = (sdkMetaData, platform) => {
 
-    if (platform == audit.PLATFORM_IOS) {
+    if (platform === audit.PLATFORM_IOS) {
         return {
             key: 'Brand',
             value: 'Apple Inc.'
         }
 
-    } else if(platform == audit.PLATFORM_ANDROID) {
+    } else if(platform === audit.PLATFORM_ANDROID) {
         let brand = sdkMetaData['device_manufacturer'];
 
         if (brand) {
@@ -74,12 +74,12 @@ const findOsInformation = (sdkMetaData, platform) => {
     let apiLevel = sdkMetaData['device_api'];
     let osVersion = sdkMetaData['device_os'];
 
-    if (platform == audit.PLATFORM_ANDROID) {
+    if (platform === audit.PLATFORM_ANDROID) {
         return {
             key: 'OS Version',
             value: `API ${apiLevel}, Android ${osVersion}`
         }    
-    } else if (platform == audit.PLATFORM_IOS) {
+    } else if (platform === audit.PLATFORM_IOS) {
         if (osVersion) {
             return {
                 key: 'iOS Version',
@@ -115,7 +115,7 @@ const findStorageInformation = (sdkMetaData) => {
 
 const convertMemoryForDisplay = (memoryAmount, sdkVersion) => {
 
-    if (sdkVersion == audit.VERSION_1x || sdkVersion.startsWith("1.")) {
+    if (sdkVersion === audit.VERSION_1x || sdkVersion.startsWith("1.")) {
         // 1.x sends memory usage in B
         return (memoryAmount / 1024 / 1024 / 1024).toFixed(2);
     } else { 
@@ -135,13 +135,13 @@ const findMemoryUseage = (sdkMetaData, sdkVersion) => {
             value: `${convertMemoryForDisplay(usedMemory, sdkVersion)}/${convertMemoryForDisplay(totalMemory, sdkVersion)} GB`
         }
 
-    } else if (totalMemory > 0 && usedMemory == 0) {
+    } else if (totalMemory > 0 && usedMemory === 0) {
         return {
             key: 'Memory',
             value: `${convertMemoryForDisplay(totalMemory, sdkVersion)} GB`
         }
 
-    } else if (totalMemory == 0 && usedMemory > 0) {
+    } else if (totalMemory === 0 && usedMemory > 0) {
         return {
             key: 'Used Memory',
             value: `${convertMemoryForDisplay(usedMemory, sdkVersion)} GB`
