@@ -1,62 +1,56 @@
 section[data-main] {
 
   .row {
-    margin: 0;
+    height: 100%;
     max-width: 100%;
   }
-  
-  #sdk-version {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px dotted #CCC;
+
+  .row:before, .row:after {
+    display: table;
   }
-  
+
+  #sdk-version {
+    padding-top: 20px;
+    border-top-color: #D8DCDE; /* Grey-300 */
+    border-top-width: 1px;
+  }
+
   #sdk-version p {
-    color: #555555;
-    font-weight: 100;
+    color: #68737D; /* Grey-600 */
     font-size: 10px;
     text-decoration: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
   }
-  
+
   h1, h2, h3, h4, h5 {
     text-transform: uppercase;
-    color: #555555;
+    color: #2F3941; /* Grey-800 */
     font-size: 14px;
-    line-height: 18px;
+    line-height: 20px;
     font-weight: 600;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
   }
-  
+
   h6 {
-    text-transform: uppercase;
-    color: #37B8AF;
-    font-weight: 200;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
+    color: #2F3941; /* Grey-800 */
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 14px;
   }
-  
+
   p {
     font-size: 12px;
-    color: #555555;
+    color: #2F3941; /* Grey-800 */
   }
-  
+
   .img-small {
     height: 15px;
     padding-right: 5px;
   }
-  
+
   .device-info, .user-info {
     padding-top: 5px;
     padding-bottom: 5px;
   }
-  
+
   .half-left {
     width: 50%;
     float: left;
@@ -65,15 +59,15 @@ section[data-main] {
     width: 50%;
     float: right;
   }
-  
+
   hr {
     margin-top: 5px;
     margin-bottom: 0;
   }
-  
-  .loading{
+
+  .loading {
     display: block;
-    margin: 0 auto;
+    margin: 40px auto;
+    width: 40px;
   }
-  
 }
