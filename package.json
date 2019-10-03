@@ -9,7 +9,8 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "zat server -p ./dist"
+    "start": "zat server -p ./dist",
+    "lint": "standard"
   },
   "license": "Apache-2.0",
   "author": "Zendesk",
@@ -29,7 +30,8 @@
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
-    "karma-webpack": "^2.0.4"
+    "karma-webpack": "^2.0.4",
+    "standard": "^11.0.1"
   },
   "dependencies": {
     "babel-core": "^6.25.0",
