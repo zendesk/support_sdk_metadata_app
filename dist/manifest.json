@@ -1,8 +1,8 @@
 {
   "name": "Support SDK Metadata",
   "author": {
-    "name": "Zendesk Labs",
-    "email": "zendesklabs@zendesk.com",
+    "name": "Zendesk",
+    "email": "support@zendesk.com",
     "url": "https://www.zendesk.com"
   },
   "defaultLocale": "en",
@@ -12,6 +12,6 @@
       "ticket_sidebar": "assets/index.html"
     }
   },
-  "version": "2.0",
+  "version": "2.0.0",
   "frameworkVersion": "2.0"
 }
