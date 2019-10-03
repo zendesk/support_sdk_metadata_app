@@ -3,7 +3,7 @@ import * as audit from './audit_parser.js';
 
 export const buildDeviceString = (deviceInfo) => {
     var deviceString = "";
-    
+
     // Variant
     if (deviceInfo.variant === audit.VARIANT_UNITY) {
         deviceString = "Unity Plugin for ";
@@ -22,7 +22,7 @@ export const buildDeviceString = (deviceInfo) => {
     if (deviceInfo.version === audit.VERSION_1x) {
         deviceString += "v1.0 or v1.1 ";
     } else if (deviceInfo.version === audit.VERSION_UNKOWN) {
-        deviceString += "unkown version ";
+        deviceString += "unknown version ";
     } else {
         deviceString += `v${deviceInfo.version}`;
     }
@@ -78,7 +78,7 @@ const findOsInformation = (sdkMetaData, platform) => {
         return {
             key: 'OS Version',
             value: `API ${apiLevel}, Android ${osVersion}`
-        }    
+        }
     } else if (platform === audit.PLATFORM_IOS) {
         if (osVersion) {
             return {
@@ -102,7 +102,7 @@ const findBatteryInformation = (sdkMetaData) => {
 }
 
 const findStorageInformation = (sdkMetaData) => {
-    
+
     let storage = sdkMetaData['device_storage'] || -1;
 
     if (storage > -1) {
@@ -118,7 +118,7 @@ const convertMemoryForDisplay = (memoryAmount, sdkVersion) => {
     if (sdkVersion === audit.VERSION_1x || sdkVersion.startsWith("1.")) {
         // 1.x sends memory usage in B
         return (memoryAmount / 1024 / 1024 / 1024).toFixed(2);
-    } else { 
+    } else {
         // 2.x sends memory usage in MB
         return (memoryAmount / 1024).toFixed(2);
     }
