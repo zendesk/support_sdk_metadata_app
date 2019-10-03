@@ -14,11 +14,9 @@
           <p>{{system.location}}</p>
         </div>
       </div>
-    </div>  
-  </div>
-  <div class="row">
-    <div id="sdk-version">
-      <p>{{sdk}}</p>
     </div>
   </div>
+</div>
+<div id="sdk-version">
+    <p>{{sdk}}</p>
 </div>
