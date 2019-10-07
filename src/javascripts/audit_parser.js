@@ -1,4 +1,3 @@
-
 export const PLATFORM_UNKOWN = 1
 export const PLATFORM_ANDROID = 2
 export const PLATFORM_IOS = 3
