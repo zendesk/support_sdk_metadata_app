@@ -6,8 +6,8 @@ packages:
 parts:
   - translation:
       key: "txt.apps.support_sdk_metadata.app.name"
-      title: "Name for App: Ticket Redaction"
-      value: "Ticket Redaction"
+      title: "Name for App: Support SDK Metadata"
+      value: "Support SDK Metadata"
   - translation:
       key: "txt.apps.support_sdk_metadata.app.short_description"
       title: "Description for App: Support SDK Metadata"
