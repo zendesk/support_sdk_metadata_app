@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="device-info">
+    <div class="half-left">
+      <h6>{{infoLeft.key}}</h6>
+      <p>{{{infoLeft.value}}}</p>
+    </div>
+    <div class="half-right">
+      <h6>{{infoRight.key}}</h6>
+      <p>{{{infoRight.value}}}</p>
+    </div>
+  </div>
+</div>

@@ -29,7 +29,7 @@ Not all information is available for all operating systems and devices.
 
 ## Set-up/installation instructions:
 
-Install the app through the Zendesk apps marketplace. As part of the installation you will be able to name the app and set any role restrictions.
+Install the app through the [Zendesk Marketplace](https://www.zendesk.com/apps/). As part of the installation you will be able to name the app and set any role restrictions.
 
 ## Contribution:
 
@@ -38,11 +38,12 @@ Install the app through the Zendesk apps marketplace. As part of the installatio
 
 ## Screenshot:
 
-![](http://zen-marketing-product.s3.amazonaws.com/product/images/sdk_support_metadata_app.png)
+![](https://i.imgur.com/wVZbbd7.png)
 
 ## Release Notes:
 
 | Version | Notes |
 | ----- | ----- |
+| 2.0 | Update to ZAF v2, update colours and style to use Zendesk Garden |
 | 1.1 | Changes accent color to match the New Zendesk branding |
 | 1.0 | First release |

@@ -1,0 +1,11 @@
+@import './ticket_sidebar.scss';
+
+.spinner {
+  display: block;
+  margin: 20px auto;
+
+  &.dotted {
+    background-image: url('../images/spinner.gif');
+    width: 40px;
+  }
+}
