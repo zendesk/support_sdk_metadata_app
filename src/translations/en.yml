@@ -18,18 +18,29 @@ parts:
       value: "Support SDK Metadata App allows you to see information relating to a ticket and device if it was created via the Support SDK.
 The following information is displayed about the end-user and their device in the ticker sidebar:
 
+
 * Device name
+
 * Operating system and version
+
 * Battery level
+
 * Device storage
+
 * Device memory
+
 * IP address
+
 * Location
+
 * Zendesk SDK name and version number
+
 
 The ticket app will only appear in the ticket sidebar when the ticket was received via the Zendesk Support SDK.
 
+
 Not all information is available for all operating systems and devices.
+
 
 By enabling this app, You agree to the [Built by Zendesk Terms of Use](https://www.zendesk.com/company/built-by-zendesk-agmt/)."
   - translation:
